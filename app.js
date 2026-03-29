@@ -58,9 +58,8 @@ startButton.addEventListener("click", () => {
     const scoreIncreament = () => {
         if (highestScore == null) {
             localStorage.setItem("highest score", 0);
-        } else {
-            highestScorePara.innerText = highestScore;
-        }
+        } 
+        highestScorePara.innerText = highestScore;
         highestScorePara.innerText = highestScore;
         score += 1;
         scorePara.innerText = score;
