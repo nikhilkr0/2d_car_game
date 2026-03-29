@@ -2,7 +2,6 @@ const container = document.getElementById("container");
 const containerHeight = container.clientHeight;
 const userCarContainer = document.getElementById('userCarContainer');
 const scorePara = document.getElementById("score");
-const highestScorePara = document.getElementById("highestScore");
 let highestScore = localStorage.getItem("highest score");
 
 const button = document.getElementById("startButton");
@@ -24,6 +23,7 @@ const createObstacle = () => {
 
 const startButton = document.getElementById("startButton");
 startButton.addEventListener("click", () => {
+    const highestScorePara = document.getElementById("highestScore");
     const music = document.getElementById("car_audio");
     music.play();
     music.loop = true;
@@ -32,7 +32,6 @@ startButton.addEventListener("click", () => {
     let carY = 0;
     const carControl = (e) => {
         const userCarContainerHeight = userCarContainer.clientHeight;
-        const containerWidth = (container.clientWidth) / 2;
         let userCarContainerProp = userCarContainer.getBoundingClientRect();
         let containerProp = container.getBoundingClientRect();
         if (e.key == "ArrowUp" || e == "ArrowUp") {
