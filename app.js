@@ -60,7 +60,6 @@ startButton.addEventListener("click", () => {
             localStorage.setItem("highest score", 0);
         } 
         highestScorePara.innerText = highestScore;
-        highestScorePara.innerText = highestScore;
         score += 1;
         scorePara.innerText = score;
     }
