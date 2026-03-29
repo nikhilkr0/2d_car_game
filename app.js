@@ -2,7 +2,7 @@ const container = document.getElementById("container");
 const containerHeight = container.clientHeight;
 const userCarContainer = document.getElementById('userCarContainer');
 const scorePara = document.getElementById("score");
-let highestScore = localStorage.getItem("highest score");
+const highestScorePara = document.getElementById("highestScore");
 
 const button = document.getElementById("startButton");
 const createObstacle = () => {
@@ -23,7 +23,7 @@ const createObstacle = () => {
 
 const startButton = document.getElementById("startButton");
 startButton.addEventListener("click", () => {
-    const highestScorePara = document.getElementById("highestScore");
+    let highestScore = localStorage.getItem("highest score");
     const music = document.getElementById("car_audio");
     music.play();
     music.loop = true;
