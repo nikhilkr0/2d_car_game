@@ -21,6 +21,7 @@ const createObstacle = () => {
 }
 
 
+
 const startButton = document.getElementById("startButton");
 startButton.addEventListener("click", () => {
     let highestScore = localStorage.getItem("highest score");
@@ -54,20 +55,21 @@ startButton.addEventListener("click", () => {
         }
         userCarContainer.style.transform = `translate(${carX}px,${carY}px)`
     }
+    function handleMouseDown(e) {
+        const id = e.target.getAttribute('id');
+        carControl(id);
+    }
     window.addEventListener("keydown", carControl);
     const scoreIncreament = () => {
         if (highestScore == null) {
             localStorage.setItem("highest score", 0);
-        } 
+        }
         highestScorePara.innerText = highestScore;
         score += 1;
         scorePara.innerText = score;
     }
     document.querySelectorAll(".carButtons").forEach((element) => {
-        element.addEventListener("mousedown", () => {
-            const id = element.getAttribute('id');
-            carControl(id);
-        })
+        element.addEventListener("mousedown", handleMouseDown);
     })
     const startContainer = document.getElementById("startContainer");
     startContainer.style.visibility = "hidden";
@@ -105,6 +107,9 @@ startButton.addEventListener("click", () => {
                 }
                 music.pause();
                 startContainer.style.visibility = "visible";
+                document.querySelectorAll(".carButtons").forEach((element) => {
+                    element.removeEventListener("mousedown", handleMouseDown);
+                })
             }
         })
     }

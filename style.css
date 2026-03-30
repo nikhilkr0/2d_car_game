@@ -6,6 +6,8 @@
 html{
     background-color: black;
     background-image: url('car_game.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* start container */
 
@@ -107,7 +109,7 @@ html{
 #userCarContainer{
     position: absolute;
     bottom: 0px;
-    right: 42%;
+    right: 45%;
 }
 #userCar{
     width: 40px;
@@ -198,6 +200,7 @@ html{
 @media (max-width:680px) {
     html{
         background-image: none;
+        padding: 10px;
     }
     #container{
         width: 100%;
