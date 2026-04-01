@@ -38,7 +38,7 @@ html{
 /* game container */
 #container{
     position: relative;
-    height: 100vh;
+    min-height: 100dvh;
     width: 576px;
     overflow: hidden;
     margin: auto;
