@@ -13,7 +13,6 @@ let scoreRate=10;
 
 
 startButton.addEventListener(('click'), () => {
-    window.scrollTo(0, document.body.scrollHeight);
     score=0;
     cancelAnimationFrame(carAnimationId);
     gameRunning=true;
@@ -117,6 +116,7 @@ startButton.addEventListener(('click'), () => {
             const obstacleImage = document.createElement("img");
             obstacleImage.setAttribute('class', 'obstcaleImage');
             obstacleImage.setAttribute("src", `./obstacles/${obstacle}`)
+            obstacleImage.setAttribute("alt","obstacleImage");
             obstacleContainer.appendChild(obstacleImage);
             obstacleContainer.style.right = `${obstaclePosition}%`;
             container.insertAdjacentElement('afterbegin', obstacleContainer);
