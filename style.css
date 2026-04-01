@@ -216,9 +216,9 @@ html{
         width: 35px;
     }
     #buttonContainer{
-        grid-template-columns: 40px 40px;
+        grid-template-columns: 60px 60px;
     }
     .carButtons{
-        height: 40px;
+        height: 60px;
     }
 }
