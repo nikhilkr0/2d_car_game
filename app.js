@@ -11,7 +11,9 @@ const speed = 150;//150 pixel per second
 let obstacleSpeed = 120;
 let scoreRate=10;
 
+
 startButton.addEventListener(('click'), () => {
+    window.scrollTo(0, document.body.scrollHeight);
     score=0;
     cancelAnimationFrame(carAnimationId);
     gameRunning=true;
