@@ -77,7 +77,6 @@ startButton.addEventListener(('click'), () => {
 
     function gameLoop(timestamp) {
         const deltaTime = Math.min(((timestamp - lastTime) / 1000),0.1); //millisecond to second;
-        console.log(deltaTime)
         lastTime = timestamp;
         const userCarContainerHeight = userCarContainer.clientHeight;
         let userCarContainerProp = userCarContainer.getBoundingClientRect();
