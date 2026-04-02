@@ -12,6 +12,9 @@ html{
 body{
     overflow: hidden;
 }
+img{
+    pointer-events: none;
+}
 /* start container */
 
 #startContainer{
